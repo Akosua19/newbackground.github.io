@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background color change</title>
+    <style>
+       
+       body{
+           background-color: #0000ff;
+       }
+        button{
+            padding: 20px;
+            margin: 5px;
+            color: #ccc;
+            margin: 80px;
+        }
+    </style>
+</head>
+<body>
+       <button id="btn" onmouseout="colorSet()" >MouseOut</button>
+       <button onclick="hry()">Click</button>
+       <button onmouseover="hello()">Hover </button>
+
+    <script>
+    function colorSet(color){
+        document.body.style.background = color;
+     }
+     addEventListener('mouseout',function (){colorSet('green')});
+
+
+     function hry(color){
+         document.body.style.background = color;
+        }
+        addEventListener('click' ,function(){hry('brown')});
+
+    function hello(set){
+        document.body.style.background = set;
+    }
+    addEventListener('mouseover' , function(){hello('orange')})
+    </script>
+</body>
+</html>
